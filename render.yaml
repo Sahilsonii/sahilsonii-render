@@ -1,0 +1,11 @@
+# Render Blueprint: a static site whose every address redirects to the portfolio, keeping the path.
+services:
+  - type: web
+    name: sahilsonii
+    runtime: static
+    staticPublishPath: .
+    buildCommand: echo "Static files, nothing to build"
+    routes:
+      - type: redirect
+        source: /*
+        destination: https://sahilsonii.dpdns.org/*
